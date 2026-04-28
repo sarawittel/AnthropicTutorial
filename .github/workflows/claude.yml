@@ -34,7 +34,7 @@ jobs:
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
-          claude_ai_oauth_token: ${{ secrets.ANTHROPIC_API_KEY }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
 
           custom_instructions:
             The project is already set up with all dependencies installed.
