@@ -1,0 +1,205 @@
+[     307ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:14537
+[     451ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} cacheNode={{lazyData:null, ...}} segmentPath={[...]}>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <Home>
+            <MainContent user={null}>
+              <FileSystemProvider initialData={undefined}>
+                <ChatProvider projectId={undefined} initialMessages={undefined}>
+                  <div className="h-screen w...">
+                    <ResizablePanelGroup direction="horizontal" className="h-full">
+                      <forwardRef(PanelGroup) data-slot="resizable-..." className="flex w-ful..." direction="horizontal">
+                        <PanelGroup data-slot="resizable-..." className="flex w-ful..." direction="horizontal" ...>
+                          <div
+                            data-slot="resizable-panel-group"
+                            className="flex w-full data-[panel-group-direction=vertical]:flex-col h-full"
+                            id={null}
+                            ref={{current:null}}
+                            style={{display:"flex",flexDirection:"row",height:"100%",overflow:"hidden",width:"100%"}}
+                            data-panel-group=""
+                            data-panel-group-direction="horizontal"
++                           data-panel-group-id="_R_lrlb_"
+-                           data-panel-group-id="_R_4lrlb_"
+                          >
+                            <ResizablePanel defaultSize={35} minSize={25} maxSize={50}>
+                              <forwardRef(Panel) data-slot="resizable-..." defaultSize={35} minSize={25} maxSize={50}>
+                                <Panel data-slot="resizable-..." defaultSize={35} minSize={25} maxSize={50} ...>
+                                  <div
+                                    data-slot="resizable-panel"
+                                    className=""
++                                   id="_R_6lrlb_"
+-                                   id="_R_slrlb_"
+                                    style={{flexBasis:0,flexGrow:"35.0",flexShrink:1,overflow:"hidden",pointerEvents:undefined}}
++                                   data-panel-group-id="_R_lrlb_"
+-                                   data-panel-group-id="_R_4lrlb_"
+                                    data-panel=""
+                                    data-panel-collapsible={undefined}
++                                   data-panel-id="_R_6lrlb_"
+-                                   data-panel-id="_R_slrlb_"
+                                    data-panel-size="35.0"
+                                  >
+                            <ResizableHandle className="w-[1px] bg...">
+                              <PanelResizeHandle data-slot="resizable-..." className={"focus-vi..."}>
+                                <div
+                                  data-slot="resizable-handle"
+                                  className={"focus-visible:ring-ring relative flex items-center justify-center after..."}
+                                  id={undefined}
+                                  onBlur={function onBlur}
+                                  onFocus={function onFocus}
+                                  ref={{current:null}}
+                                  role="separator"
+                                  style={{touchAction:"none",userSelect:"none"}}
+                                  tabIndex={0}
+                                  data-panel-group-direction="horizontal"
++                                 data-panel-group-id="_R_lrlb_"
+-                                 data-panel-group-id="_R_4lrlb_"
+                                  data-resize-handle=""
+                                  data-resize-handle-active={undefined}
+                                  data-panel-resize-handle-enabled={true}
++                                 data-panel-resize-handle-id="_R_alrlb_"
+-                                 data-panel-resize-handle-id="_R_1clrlb_"
+                                  data-resize-handle-state="inactive"
+                                >
+                            <ResizablePanel defaultSize={65}>
+                              <forwardRef(Panel) data-slot="resizable-..." defaultSize={65}>
+                                <Panel data-slot="resizable-..." defaultSize={65} forwardedRef={null}>
+                                  <div
+                                    data-slot="resizable-panel"
+                                    className=""
++                                   id="_R_elrlb_"
+-                                   id="_R_1slrlb_"
+                                    style={{flexBasis:0,flexGrow:"65.0",flexShrink:1,overflow:"hidden",pointerEvents:undefined}}
++                                   data-panel-group-id="_R_lrlb_"
+-                                   data-panel-group-id="_R_4lrlb_"
+                                    data-panel=""
+                                    data-panel-collapsible={undefined}
++                                   data-panel-id="_R_elrlb_"
+-                                   data-panel-id="_R_1slrlb_"
+                                    data-panel-size="65.0"
+                                  >
+                                    ...
+                                      <div role="tablist" aria-orientation="horizontal" data-slot="tabs-list" ...>
+                                        ...
+                                          <Primitive.span.Slot tabIndex={-1} data-orientation="horizontal" ...>
+                                            <Primitive.span.SlotClone tabIndex={-1} data-orientation="horizontal" ...>
+                                              <Primitive.button type="button" role="tab" aria-selected={true} ...>
+                                                <button
+                                                  type="button"
+                                                  role="tab"
+                                                  aria-selected={true}
++                                                 aria-controls="radix-_R_5ulrlb_-content-preview"
+-                                                 aria-controls="radix-_R_nslrlb_-content-preview"
+                                                  data-state="active"
+                                                  data-disabled={undefined}
+                                                  disabled={false}
++                                                 id="radix-_R_5ulrlb_-trigger-preview"
+-                                                 id="radix-_R_nslrlb_-trigger-preview"
+                                                  data-slot="tabs-trigger"
+                                                  className={"dark:data-[state=active]:text-foreground focus-visible:..."}
+                                                  onMouseDown={function}
+                                                  onKeyDown={function}
+                                                  onFocus={function}
+                                                  tabIndex={-1}
+                                                  data-orientation="horizontal"
+                                                  data-radix-collection-item=""
+                                                  ref={function}
+                                                >
++                                                 Preview
+                                        ...
+                                          <Primitive.span.Slot tabIndex={-1} data-orientation="horizontal" ...>
+                                            <Primitive.span.SlotClone tabIndex={-1} data-orientation="horizontal" ...>
+                                              <Primitive.button type="button" role="tab" aria-selected={false} ...>
+                                                <button
+                                                  type="button"
+                                                  role="tab"
+                                                  aria-selected={false}
++                                                 aria-controls="radix-_R_5ulrlb_-content-code"
+-                                                 aria-controls="radix-_R_nslrlb_-content-code"
+                                                  data-state="inactive"
+                                                  data-disabled={undefined}
+                                                  disabled={false}
++                                                 id="radix-_R_5ulrlb_-trigger-code"
+-                                                 id="radix-_R_nslrlb_-trigger-code"
+                                                  data-slot="tabs-trigger"
+                                                  className={"dark:data-[state=active]:text-foreground focus-visible:..."}
+                                                  onMouseDown={function}
+                                                  onKeyDown={function}
+                                                  onFocus={function}
+                                                  tabIndex={-1}
+                                                  data-orientation="horizontal"
+                                                  data-radix-collection-item=""
+                                                  ref={function}
+                                                >
++                                                 Code
+        ...
+      ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
+[     458ms] [WARNING] WARNING: Missing resize handle for PanelGroup "_R_lrlb_" @ http://localhost:3000/_next/static/chunks/node_modules_cc098ecb._.js:3796
+[     459ms] [ERROR] No group found for id "_R_lrlb_" @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_b0daae9a._.js:2359
+[     471ms] Error: No group found for id "_R_lrlb_"
+    at assert (http://localhost:3000/_next/static/chunks/node_modules_cc098ecb._.js:3420:15)
+    at useWindowSplitterPanelGroupBehavior.useEffect (http://localhost:3000/_next/static/chunks/node_modules_cc098ecb._.js:3837:13)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:13122:22)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:886:74)
+    at commitHookEffectListMount (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:6640:628)
+    at commitHookPassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:6675:60)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7630:33)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7673:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7673:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7673:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7673:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7673:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7633:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7633:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7633:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+    at commitPassiveMountOnFiber (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7629:17)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:7621:106)
+[     602ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_cf1d9188._.js:5949
+[     656ms] [LOG] [Fast Refresh] done in 156ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_cf1d9188._.js:5809

@@ -1,0 +1,13 @@
+{
+  "enabledPlugins": {
+    "atlassian@claude-plugins-official": true,
+    "ui5@claude-plugins-official": true,
+    "cds-mcp@claude-plugins-official": true,
+    "atlassian-forge-skills@claude-plugins-official": true,
+    "sonarqube@claude-plugins-official": true,
+    "postman@claude-plugins-official": true,
+    "notion@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": true
+  }
+}

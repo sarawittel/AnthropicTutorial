@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+{
+    "dockerFile": "../../docker/cap-development/Dockerfile",
+    "mounts": [
+        "source=${localEnv:HOME}/.claude,target=/root/.claude,type=bind,consistency=cached",
+        "source=vgo-customerpricelist-claude-plugins,target=/root/.claude/plugins,type=volume"
+    ],
+    "postCreateCommand": "claude plugin marketplace add anthropics/claude-plugins-official && claude plugin install atlassian@claude-plugins-official -s project && claude plugin install ui5@claude-plugins-official -s project && claude plugin install cds-mcp@claude-plugins-official -s project && claude plugin install atlassian-forge-skills@claude-plugins-official -s project && claude plugin install sonarqube@claude-plugins-official -s project && claude plugin install postman@claude-plugins-official -s project && claude plugin install notion@claude-plugins-official -s project && claude plugin install code-review@claude-plugins-official -s project && claude plugin install chrome-devtools-mcp@claude-plugins-official -s project && claude /install-github-app",
+    "postStartCommand": "cf login -a 'https://api.cf.eu10-005.hana.ondemand.com' --sso -p 'VG-ORTH GmbH & Co. KG_tech-test-dels51wp' -s 'dev' --skip-ssl-validation",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "sapse.sap-ux-fiori-tools-extension-pack",
+                "sapse.vscode-cds",
+                "mermaidchart.vscode-mermaid-chart",
+                "anthropic.claude-code"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "files.trimTrailingWhitespace": true
+            }
+        }
+    }
+}
