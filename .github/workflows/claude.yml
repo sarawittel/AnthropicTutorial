@@ -36,23 +36,25 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
-          custom_instructions:
+          prompt: |
             The project is already set up with all dependencies installed.
             The server is already running at localhost:3000. Logs from it
             are being written to logs.txt. If needed, you can query the
-            db with the 'sqlite3'. If needded, use the mcp__playwright
-            set of tools to launch a browser and interact with the app.
+            db with sqlite3. Use the mcp__playwright set of tools to
+            launch a browser and interact with the app.
 
-          mcp_config: |
+          settings: |
             {
-              "mcpServers":{
+              "mcpServers": {
                 "playwright": {
                   "command": "npx",
-                  "args": ["@playwright/mcp@latest",
-                  "--allowed-origins",
-                  "localhost:3000;cdn.tailwindcss.com;esn.sh"]
+                  "args": [
+                    "@playwright/mcp@latest",
+                    "--allowed-origins",
+                    "localhost:3000;cdn.tailwindcss.com;esm.sh"
+                  ]
                 }
               }
             }
 
-          allowed_tools: "Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click"
+          claude_args: "--allowedTools Bash(npm:*) Bash(sqlite3:*) mcp__playwright__browser_snapshot mcp__playwright__browser_click mcp__playwright__browser_navigate mcp__playwright__browser_take_screenshot"
