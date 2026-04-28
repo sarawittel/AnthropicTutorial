@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vitest *)",
+      "Bash(npm audit *)",
+      "Bash(npm list *)",
+      "Bash(npm install *)",
+      "Bash(npm test *)",
+      "Bash(claude mcp *)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__new_page",
+      "mcp__playwright__browser_navigate",
+      "Bash(npx playwright *)",
+      "Bash(apt-get install *)",
+      "Bash(apt-get update *)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright",
+      "Skill(update-config)",
+      "Bash(git pull *)",
+      "Bash(git init *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git config *)",
+      "Bash(gh issue *)",
+      "Bash(gh --version)"
+    ]
+  }
+}
