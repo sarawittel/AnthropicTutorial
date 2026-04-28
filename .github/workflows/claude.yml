@@ -23,25 +23,33 @@ jobs:
       pull-requests: write
       issues: write
       id-token: write
-      actions: read # Required for Claude to read CI results on PRs
+      actions: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
           fetch-depth: 1
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start dev server
+        run: |
+          npm run dev > logs.txt 2>&1 &
+          echo "Waiting for server to be ready..."
+          npx wait-on http://localhost:3000 --timeout 60000
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
-          prompt: |
-            The project is already set up with all dependencies installed.
-            The server is already running at localhost:3000. Logs from it
-            are being written to logs.txt. If needed, you can query the
-            db with sqlite3. Use the mcp__playwright set of tools to
-            launch a browser and interact with the app.
 
           settings: |
             {
@@ -58,3 +66,5 @@ jobs:
             }
 
           claude_args: "--allowedTools Bash(npm:*) Bash(sqlite3:*) mcp__playwright__browser_snapshot mcp__playwright__browser_click mcp__playwright__browser_navigate mcp__playwright__browser_take_screenshot"
+
+          show_full_output: true
